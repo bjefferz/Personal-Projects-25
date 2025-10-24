@@ -1,0 +1,36 @@
+* {
+  background-color: rgb(107, 84, 130);
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 2vw;
+}
+
+img {
+  width: 58vw;
+  display: block;
+  margin: auto;
+  border-radius: 9%;
+}
+
+div {
+    margin: 8.5vh;
+}
+
+header {
+    margin: 4vh;
+}
+
+a:hover {
+    color: black;
+}
+
+a {
+    color: rgb(194, 173, 215);
+}
