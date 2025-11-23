@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/hand-drawn-scientific-formulas-chalkboard_23-2148496321.avif);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 5vh;
+  margin-bottom: 40px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+header h1 {
+  color: palegoldenrod;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  padding: 15px 30px;
+  border-radius: 12px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+header p {
+  color: mediumpurple;
+  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 12px 25px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calculator {
+  background: #2d2d2d;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.display {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 25px 20px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.previous-operation {
+  color: #888;
+  font-size: 18px;
+  min-height: 25px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
+}
+
+.current-operation {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 300;
+  min-height: 45px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: right;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 18px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #fff;
+  background: #404040;
+}
+
+button:hover {
+  opacity: 0.85;
+  transform: scale(0.98);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.btn-number,
+.btn-decimal {
+  background: #505050;
+}
+
+.btn-operator {
+  background: #ff9500;
+}
+
+.btn-clear {
+  background: #d4d4d2;
+  color: #1a1a1a;
+  grid-column: span 2;
+}
+
+.btn-delete {
+  background: #d4d4d2;
+  color: #1a1a1a;
+}
+
+.btn-equals {
+  background: #ff9500;
+  grid-column: span 2;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+/* Responsive design */
+
+/* Mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  header {
+    margin-bottom: 25px;
+    padding: 20px 15px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+
+  .calculator {
+    padding: 15px;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .display {
+    padding: 20px 15px;
+    min-height: 85px;
+    margin-bottom: 15px;
+  }
+
+  .current-operation {
+    font-size: 28px;
+    min-height: 35px;
+  }
+
+  .previous-operation {
+    font-size: 14px;
+    min-height: 20px;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+
+  .buttons {
+    gap: 8px;
+  }
+
+  button {
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+}
+
+/* Tablet devices (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  header {
+    margin-bottom: 35px;
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 36px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+
+  header p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  .calculator {
+    max-width: 400px;
+    padding: 22px;
+  }
+
+  .display {
+    padding: 23px 18px;
+    min-height: 95px;
+  }
+
+  .current-operation {
+    font-size: 34px;
+    min-height: 42px;
+  }
+
+  .previous-operation {
+    font-size: 17px;
+    min-height: 23px;
+  }
+
+  .error-message {
+    font-size: 17px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  button {
+    padding: 23px;
+    font-size: 21px;
+  }
+}
+
+/* Desktop devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 44px;
+  }
+
+  header p {
+    font-size: 17px;
+    max-width: 580px;
+  }
+}
+
+/* Large desktop devices (1025px and up) */
+@media (min-width: 1025px) {
+  header h1 {
+    font-size: 48px;
+  }
+
+  header p {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  .calculator {
+    max-width: 380px;
+  }
+}
