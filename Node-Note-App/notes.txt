@@ -1,0 +1,2 @@
+This is my new note!
+This is an appended note.
